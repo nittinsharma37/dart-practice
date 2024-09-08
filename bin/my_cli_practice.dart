@@ -22,4 +22,8 @@ void main() {
   print(revStr);
   String revWrds = revWords(str);
   print(revWrds);
+  Map countFreq = countFrequency(arr);
+  print(countFreq);
+  List rearrangeArr = rearrangeIncreasingDecreasing(arr);
+  print(rearrangeArr);
 }

@@ -72,3 +72,29 @@ String revWords(String str) {
   }
   return revWords.join(" ");
 }
+
+Map countFrequency(List arr) {
+  Map frequency = {};
+  for (int i = 0; i < arr.length; i++) {
+    frequency[arr[i]] = (frequency[arr[i]] ?? 0) + 1;
+  }
+  return frequency;
+}
+
+List<int> rearrangeIncreasingDecreasing(List<int> arr) {
+  List sortedArr = [...arr];
+  sortedArr.sort(((a, b) => a - b));
+  int i = 0, j = sortedArr.length - 1;
+  List<int> result = [];
+
+  while (i < j) {
+    result.add(sortedArr[i++]);
+    result.add(sortedArr[j--]);
+  }
+
+  if (i == j) {
+    result.add(sortedArr[i]);
+  }
+
+  return result;
+}
